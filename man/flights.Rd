@@ -7,7 +7,7 @@ function to load and format flight data
 \code{flights} is used for loading the format the flight data from selected days.
 }
 \usage{
-flights(from = NULL, to = NULL, path = system.file("MUCflights.sqlite", package = "MUCflights"))
+flights(from = NULL, to = NULL, path = system.file("MUCflights.RData", package = "MUCflights"))
 }
 \arguments{
   \item{from}{

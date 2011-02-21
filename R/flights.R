@@ -1,15 +1,16 @@
 
 flights <- function(from = NULL, to = NULL, 
-                    path = system.file("MUCflights.sqlite", 
+                    path = system.file("MUCflights.RData", 
                                        package = "MUCflights")) {
   
   # Check
   ### Datenbank anlegen
-  m <- dbDriver("SQLite")
-  con <- dbConnect(m, dbname = path)
+  # m <- dbDriver("SQLite")
+  # con <- dbConnect(m, dbname = path)
 
-  ret <- dbGetQuery(con, "SELECT * FROM MUCflights")
-  dbDisconnect(con)
+  # ret <- dbGetQuery(con, "SELECT * FROM MUCflights")
+  # dbDisconnect(con)
+  load(path)
 
   # Datumswerte als solche spezifizieren
   ret$stt <- as.POSIXct(strftime(ret$stt, format = "%Y-%m-%d %H:%M:%S.0"))

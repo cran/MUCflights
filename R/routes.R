@@ -1,9 +1,9 @@
 
 routes <- function(flights.info, start.IATA = "MUC") {
-
+        
         airports <- NULL
-        load(system.file("data/airports.RData", package = "MUCflights"))
-        ### data("airports", package = "MUCflights", envir = sys.frame(which = 1))
+        #load(system.file("data/airports.RData", package = "MUCflights"))
+        data("airports", package = "MUCflights", envir = sys.frame(which = 1))
         stopifnot(!is.null(airports))
 
 	# Fluege mit Ziel Muenchen loeschen
